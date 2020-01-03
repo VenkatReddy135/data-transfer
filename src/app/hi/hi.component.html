@@ -1,0 +1,13 @@
+<div class="form-group">
+    <input type="text" [(ngModel)]="dataFilter.name" class="form-control">
+</div>
+<table class="table table-dark">
+    <tr>
+        <th style="color:red">NAME</th>
+    </tr>
+    <tr (click)="add(em)" *ngFor="let em of emp|filterBy:dataFilter">
+        <td>{{em.name}}</td>
+    </tr>
+</table>
+
+
